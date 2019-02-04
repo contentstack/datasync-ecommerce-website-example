@@ -1,0 +1,90 @@
+{% extends "./layout/parent.html" %} {% block main_body %}
+{% set entry = entry.entries[0] %}
+<div class="products">
+	<div class="container">
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title" id="myModalLabel">Demo Site</h4>
+					</div>
+					<div class="modal-body">This is a Demo E-Commerce site powered by Contentstack</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="single-page">
+			<div class="single-page-row" id="detail-21">
+				<div class="col-md-6 single-top-left vcenter">
+					<div class="thumb-image detail_images flexslider">
+						<ul class="slides">
+							{% for image in entry.image_thumbnails %}
+							<li data-thumb="{{image.url}}">
+								<img src="{{image.url}}" data-imagezoom="true" class="img-responsive" alt="Image" draggable="false">
+							</li>
+							{% endfor %}
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-6 single-top-right vcenter">
+					<h3 class="item_name">{{entry.product_title}}</h3>
+					<div class="single-price">
+						<ul>
+							<li>{{entry.price_title}}</li>
+							<li class="offer-price-text">{{entry.price}}</li>
+						</ul>
+					</div>
+					<p class="single-price-text">{{entry.product_description}}</p>
+					<form action="#" method="post">
+						<input type="hidden" name="cmd" value="_cart" />
+						<input type="hidden" name="add" value="1" />
+						<input type="hidden" name="w3ls1_item" value="Handbag" />
+						<input type="hidden" name="amount" value="540.00" />
+						<button type="submit" class="snipcart-add-item w3ls-cart demoAlert" data-item-id="bltdd07833c0e830d8c"
+						 data-item-name="{{entry.product_title}}" data-item-price="{{entry.price}}" data-item-weight="20" data-item-url="/product/bltdd07833c0e830d8c">
+							<i class="fa fa-cart-plus" aria-hidden="true"></i> Add to cart</button>
+					</form>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+		<!-- //collapse -->
+	</div>
+</div>
+
+<div class="container recommendation">
+	<h4>Related Products</h4>
+	<ul id="flexiselDemo1" class="nbs-flexisel-ul">
+		{% for entry in entry.related_products %}
+		<li class="nbs-flexisel-item col-md-4 col-sm-6 col-xs-12 women-dresses">
+			<div class="women-grids wp1 animated wow slideInUp product-item" data-wow-delay=".5s">
+				<a href="{{entry.url}}">
+					<div class="product-img">
+						<img src="{{entry.image_thumbnails[0].url}}" alt="" />
+						<div class="p-mask">
+							<form action="#" method="post">
+								<input type="hidden" name="cmd" value="_cart" />
+								<input type="hidden" name="add" value="1" />
+								<input type="hidden" name="w3ls1_item" value="Shoes" />
+								<input type="hidden" name="amount" value="50.00" />
+								<button type="submit" class="snipcart-add-item w3ls-cart pw3ls-cart demoAlert" data-item-id="blt5b02c1a4d4597a17"
+								 data-item-name="Kindle Paperwhite E-reader - Black &amp; White" data-item-price="130" data-item-weight="20"
+								 data-item-url="/product/blt5b02c1a4d4597a17">
+									<i class="fa fa-cart-plus" aria-hidden="true"></i> Add to cart</button>
+							</form>
+						</div>
+					</div>
+				</a>
+				<h4>{{entry.title}}</h4>
+				<h5>{{entry.price}}</h5>
+			</div>
+		</li>
+		{% endfor %}
+	</ul>
+</div>
+</section>
+
+{% endblock %}

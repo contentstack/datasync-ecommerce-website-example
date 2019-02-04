@@ -1,0 +1,20 @@
+{% set footer = footer.entries[0] %}
+<div class="footer-sec">
+    <div id="footer" class="container">
+        <div class="copyright-text">
+            {{footer.copyright.text}}
+            <a target="_blank" href="{{footer.copyright.link.href}}">{{footer.copyright.link.title}}</a>
+        </div>
+        <div class="footer-links social">
+            <ul>
+                {% for entry in footer.social_media %}
+                <li>
+                    <a href="{{entry.url}}" class="{{entry.class}}" title="{{entry.title}}" target="_blank">
+                        <span><i class="{{entry.font_awesome_class}}" aria-hidden="true"></i></span>
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
