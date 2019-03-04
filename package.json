@@ -6,9 +6,8 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
-    "contentstack-mongodb-sdk": "file:modules/contentstack-mongodb-sdk-0.0.2.tgz",
+    "contentstack-sync-mongodb-sdk": "file:modules/contentstack-sync-mongodb-sdk-1.0.0.tgz",
     "async": "^2.6.1",
-    "config": "^1.30.0",
     "contentstack": "^3.4.1",
     "debug": "~2.6.9",
     "express": "~4.16.0",

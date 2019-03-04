@@ -6,7 +6,7 @@ var Stack = require('../models/contentstack')
 router.get('/product/:title', function (req, res, next) {
     Stack.contentType('product').entries()
         .query({
-            "data.title": req.params.title
+            "title": req.params.title
         })
         .includeReferences()
         .find()

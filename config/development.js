@@ -1,5 +1,5 @@
 const config = {
-  sdk: 'contentstack-mongodb-sdk',
+  sdk: 'contentstack-sync-mongodb-sdk',
   contentstack: {
     apikey: '',
     deliveryToken: '',

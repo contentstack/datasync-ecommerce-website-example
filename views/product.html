@@ -1,4 +1,4 @@
-{% extends "./layout/parent.html" %} {% block main_body %}
+{% extends "layout/parent.html" %} {% block main_body %}
 {% set entry = entry.entries[0] %}
 <div class="products">
 	<div class="container">
@@ -51,7 +51,7 @@
 				<div class="clearfix"> </div>
 			</div>
 		</div>
-		<!-- //collapse -->
+		<div class="pagination-sec"></div>
 	</div>
 </div>
 
@@ -78,7 +78,7 @@
 						</div>
 					</div>
 				</a>
-				<h4>{{entry.title}}</h4>
+				<h4>{{entry.product_title}}</h4>
 				<h5>{{entry.price}}</h5>
 			</div>
 		</li>

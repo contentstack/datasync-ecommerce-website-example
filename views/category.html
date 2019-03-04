@@ -1,4 +1,4 @@
-{% extends "./layout/parent.html" %} {% block main_body %}
+{% extends "layout/parent.html" %} {% block main_body %}
 <section class="main-content">
 	<div class="container">
 	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -42,12 +42,12 @@
 							</form>
 						</div>
 					</div></a>
-					<h4>{{entry.title}}</h4>
+					<h4>{{entry.product_title}}</h4>
 					<h5>{{entry.price}}</h5>
 				</div>
 			</div>
 		{% endfor %}
-	
+		<div class="pagination-sec"></div>
 	</div>
 </section>
 {% endblock %}

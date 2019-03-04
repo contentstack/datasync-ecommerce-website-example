@@ -439,7 +439,8 @@ button.w3view-cart:focus{
     text-align: center;
     display: block;
     float: left;
-    width: 100%;
+	width: 100%;
+	margin: 50px 0 50px
 }
 .pagination-sec .pagination {
     display: inline-block;

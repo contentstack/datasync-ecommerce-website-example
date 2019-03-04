@@ -1,11 +1,10 @@
 var env = process.env.NODE_ENV || 'development'
 var config = require('../config/' + env)
-const Contentstack = require(config.sdk)
-
+const Contentstack = require(config.sdk).Contentstack
 
 const Stack = Contentstack.Stack(config.contentstack)
 
-Stack.connect(config.options).then((db)=>{
+Stack.connect(config.options).then(()=>{
     console.log("db connection established!")
 }).catch(console.error)
 

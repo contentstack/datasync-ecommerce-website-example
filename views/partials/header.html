@@ -1,8 +1,8 @@
-{% set header = header.entries[0] %}
+{% set header = header.entry %}
 <div class="header-top-w3layouts">
 	<div class="container">
 		<div class="col-md-6 logo-w3">
-			<a href="/"><img src="{{header.logo[0].url}}" alt="" /></a>
+			<a href="/"><img src="{{header.logo.url}}" alt="" /></a>
 		</div>
 		<!-- <div class="col-md-6 phone-w3l">
 			<ul>
@@ -35,41 +35,6 @@
 				</div>
 			</nav>
 		</div>
-		<!-- <script>
-			$(document).ready(function () {
-				$(".dropdown").hover(
-					function () {
-						$('.dropdown-menu', this).stop(true, true).slideDown("fast");
-						$(this).toggleClass('open');
-					},
-					function () {
-						$('.dropdown-menu', this).stop(true, true).slideUp("fast");
-						$(this).toggleClass('open');
-					}
-				);
-			});
-			$(window).on("load", function () {
-				if ($(".footer").offset().top < $(window).height() - $(".footer").height()) {
-					$(".footer").css({ "top": $(window).height() - $(".footer").height() - 60, "position": "absolute" });
-				}
-			});
-		</script> -->
-		<!-- <div class="col-md-2 col-sm-2 col-xs-3 cart-wthree">
-			<div class="cart">
-				<form action="#" method="post" class="last">
-					<input type="hidden" name="cmd" value="_cart" />
-					<input type="hidden" name="display" value="1" />
-					<button class="snipcart-checkout w3view-cart" type="submit" name="submit" value="">
-						<i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-						<div class="shopping-cart">
-							<div class="snipcart-summary cart-count">
-								<span class="snipcart-total-items cart-count-number"></span>
-							</div>
-						</div>
-					</button>
-				</form>
-			</div>
-		</div> -->
 		<div class="clearfix"></div>
 	</div>
 </div>

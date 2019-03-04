@@ -5,7 +5,7 @@ module.exports = function (req, res, next) {
 	async.series([
 		function (callback) {
 			// Get Header data
-			Stack.contentType('header').entries()
+			Stack.contentType('header').entry()
 				.includeReferences()
 				.find()
 				.then(function success(result) {
@@ -14,7 +14,7 @@ module.exports = function (req, res, next) {
 		},
 		function (callback) {
 			// Get Footer data
-			Stack.contentType('footer').entries()
+			Stack.contentType('footer').entry()
 				.find()
 				.then(function success(result) {
 					callback(null, result);
