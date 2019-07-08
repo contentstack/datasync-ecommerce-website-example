@@ -1,20 +1,18 @@
 {
-  "name": "e-commerce-website-using-contentstack-datasync",
-  "version": "0.0.1",
-  "private": true,
+  "name": "datasync-ecommerce-website",
+  "version": "0.1.0",
   "scripts": {
     "start": "node ./bin/www"
   },
   "dependencies": {
-    "datasync-mongodb-sdk": "file:modules/datasync-mongodb-sdk-0.0.1.tgz",
-    "async": "^2.6.1",
-    "contentstack": "^3.4.1",
-    "debug": "~2.6.9",
-    "express": "~4.16.0",
-    "http-errors": "~1.6.2",
-    "morgan": "~1.9.0",
-    "nunjucks": "^3.1.3",
-    "request": "^2.87.0"
+    "datasync-mongodb-sdk": "file:modules/datasync-mongodb-sdk-0.1.0.tgz",
+    "async": "2.6.1",
+    "debug": "2.6.9",
+    "express": "4.16.0",
+    "http-errors": "1.6.2",
+    "morgan": "1.9.0",
+    "nunjucks": "3.1.3",
+    "request": "2.87.0"
   },
   "repository": {
     "type": "git",

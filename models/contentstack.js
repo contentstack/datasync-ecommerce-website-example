@@ -1,12 +1,12 @@
-var env = process.env.NODE_ENV || 'development'
-var config = require('../config/' + env)
+const env = process.env.NODE_ENV || 'development'
+const config = require('../config/' + env)
 const Contentstack = require(config.sdk).Contentstack
+const Stack = Contentstack.Stack(config || {})
 
-const Stack = Contentstack.Stack(config.contentstack)
+exports.connectDB = () => {
+  return Stack.connect()
+  .then(() => console.log('App connected to DB successfully!'))
+  .catch(console.error)
+}
 
-Stack.connect(config.options).then(()=>{
-    console.log("db connection established!")
-}).catch(console.error)
-
-
-module.exports = Stack
+exports.Stack = Stack

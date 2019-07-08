@@ -1,17 +1,17 @@
-var express = require('express')
-var router = express.Router()
-var Stack = require('../models/contentstack')
+const express = require('express')
+const Contentstack = require('../models/contentstack')
+const router = express.Router()
+const Stack = Contentstack.Stack
 
-
-router.get('/', function (req, res, next) {
-    var contentTypeUID = "product"
-    Stack.contentType(contentTypeUID).entries()
-        .find()
-        .then(function success(result) {
-            res.render('home.html', {
-                entries: result
-            })
-        }).catch(next)
+router.get('/', (req, res, next) => {
+  return Stack.contentType('product').entries()
+    .find()
+    .then((result) => {
+      return res.render('home.html', {
+        entries: result
+      })
+    })
+    .catch(next)
 })
 
 module.exports = router

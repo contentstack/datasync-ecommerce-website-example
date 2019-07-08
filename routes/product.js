@@ -1,20 +1,22 @@
-var express = require('express')
-var router = express.Router()
-var Stack = require('../models/contentstack')
+const express = require('express')
+const Contentstack = require('../models/contentstack')
+const router = express.Router()
+const Stack = Contentstack.Stack
 
-
-router.get('/product/:title', function (req, res, next) {
-    Stack.contentType('product').entries()
-        .query({
-            "title": req.params.title
-        })
-        .includeReferences()
-        .find()
-        .then(function success(result) {
-            res.render('product.html', {
-                entry: result
-            })
-        }).catch(next)
+router.get('/product/:uid', (req, res, next) => {
+  return Stack.contentType('product')
+    .entries()
+    .query({
+      uid: req.params.uid
+    })
+    .includeReferences()
+    .find()
+    .then((result) => {
+      return res.render('product.html', {
+        entry: result
+      })
+    })
+    .catch(next)
 })
 
 

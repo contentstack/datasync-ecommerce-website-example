@@ -1,6 +1,5 @@
 const config = {
-
-  "port": "4002"
+  port: 5000
 }
 
 module.exports = config

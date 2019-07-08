@@ -7,10 +7,10 @@
         </div>
         <div class="footer-links social">
             <ul>
-                {% for entry in footer.social_media %}
+                {% for media in footer.social_media %}
                 <li>
-                    <a href="{{entry.url}}" class="{{entry.class}}" title="{{entry.title}}" target="_blank">
-                        <span><i class="{{entry.font_awesome_class}}" aria-hidden="true"></i></span>
+                    <a href="{{media.link.href}}" class="{{media.class}}" title="{{media.link.title}}" target="_blank">
+                        <span><i class="{{media.font_awesome_class}}" aria-hidden="true"></i></span>
                     </a>
                 </li>
                 {% endfor %}
