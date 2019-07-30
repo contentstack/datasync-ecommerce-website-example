@@ -1,5 +1,5 @@
 const config = {
-  sdk: 'datasync-mongodb-sdk',
+  sdk: 'datasync-filesystem-sdk',
   locales: [
     {
       code: 'en-us',
@@ -11,8 +11,7 @@ const config = {
     }
   ],
   contentStore: {
-    dbName: 'ecommerce-demo',
-    collectionName: 'development',
+    baseDir: '../datasync-boilerplate/_contents'
   },
   assetStore: {
     baseDir: '../datasync-boilerplate/_contents'

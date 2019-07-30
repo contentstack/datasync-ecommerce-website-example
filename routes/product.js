@@ -3,11 +3,11 @@ const Contentstack = require('../models/contentstack')
 const router = express.Router()
 const Stack = Contentstack.Stack
 
-router.get('/product/:uid', (req, res, next) => {
+router.get('/product/:title', (req, res, next) => {
   return Stack.contentType('product')
     .entries()
     .query({
-      uid: req.params.uid
+      title: req.params.title
     })
     .includeReferences()
     .find()

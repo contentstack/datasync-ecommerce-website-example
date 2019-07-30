@@ -2,7 +2,7 @@
 <div class="header-top-w3layouts">
 	<div class="container">
 		<div class="col-md-6 logo-w3">
-			<a href="/"><img src="{{header.site_logo.url}}" alt="" /></a>
+			<a href="/"><img src="{{header.logo.url}}" alt="" /></a>
 		</div>
 		<!-- <div class="col-md-6 phone-w3l">
 			<ul>
@@ -28,8 +28,8 @@
 				<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
 					<ul class="nav navbar-nav ">
 						<li><a href="/" class="hyper"><span>Home</span></a></li>
-						{% for navigation in header.navigation %}
-						<li><a href="{{navigation.category.url}}" class="hyper"><span>{{navigation.title}}</span></a></li>
+						{% for entry in header.menus %}
+						<li><a href="{{entry.category[0].url}}" class="hyper"><span>{{entry.menu}}</span></a></li>
 						{% endfor %}
 					</ul>
 				</div>
