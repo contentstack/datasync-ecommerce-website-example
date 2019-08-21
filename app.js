@@ -4,6 +4,9 @@ const logger = require('morgan')
 const nunjucks = require('nunjucks')
 const Contentstack = require('./models/contentstack')
 const app = express()
+const path = require('path')
+const env = process.env.NODE_ENV || 'development'
+const config = require('./config/' + env)
 
 //setting view and nunjuks configuration
 app.set('view engine', 'html')
@@ -21,7 +24,7 @@ app.use(express.urlencoded({
 
 // setting static files
 app.use('/static', express.static(__dirname + '/public'))
-
+app.use('/images', express.static(path.join(__dirname, config.assetStore.baseDir)))
 // Promise function. Runs/should in background.
 Contentstack.connectDB()
 

@@ -22,8 +22,8 @@
 					<div class="thumb-image detail_images flexslider">
 						<ul class="slides">
 							{% for image in entry.image_thumbnails %}
-							<li data-thumb="{{image.url}}">
-								<img src="{{image.url}}" data-imagezoom="true" class="img-responsive" alt="Image" draggable="false">
+							<li data-thumb="/images/{{image._internal_url}}">
+								<img src="/images/{{image._internal_url}}" data-imagezoom="true" class="img-responsive" alt="Image" draggable="false">
 							</li>
 							{% endfor %}
 						</ul>
@@ -63,7 +63,7 @@
 			<div class="women-grids wp1 animated wow slideInUp product-item" data-wow-delay=".5s">
 				<a href="{{entry.url}}">
 					<div class="product-img">
-						<img src="{{entry.image_thumbnails[0].url}}" alt="" />
+						<img src="/images/{{entry.image_thumbnails[0]._internal_url}}" alt="" />
 						<div class="p-mask">
 							<form action="#" method="post">
 								<input type="hidden" name="cmd" value="_cart" />

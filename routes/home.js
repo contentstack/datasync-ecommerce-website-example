@@ -4,7 +4,9 @@ const router = express.Router()
 const Stack = Contentstack.Stack
 
 router.get('/', (req, res, next) => {
-  return Stack.contentType('product').entries().includeReferences()
+  return Stack.contentType('product')
+    .entries()
+    .includeReferences()
     .find()
     .then((result) => {
       return res.render('home.html', {
