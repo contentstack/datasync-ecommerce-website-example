@@ -11,10 +11,10 @@ const config = {
     }
   ],
   contentStore: {
-    baseDir: '_development_contents'
+    baseDir: '../../datasync-boilerplate/_development_contents'
   },
   assetStore: {
-    baseDir: '_development_contents'
+    baseDir: '../../datasync-boilerplate/_development_contents'
   },
   port: 4000
 }
