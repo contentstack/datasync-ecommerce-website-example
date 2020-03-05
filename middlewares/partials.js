@@ -17,7 +17,7 @@ module.exports = function (req, res, next) {
 		function (callback) {
 			//Get Footer data
       Stack.contentType('footer').entry()
-        .excludeReferences()
+        .includeReferences()
 				.find()
 				.then(function success(result) {
 					callback(null, result);

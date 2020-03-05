@@ -18,12 +18,13 @@
 		</div>
 
 		{% for entry in entries.entries %}
-
+		
 		<div class="col-md-4 col-sm-6 col-xs-12 women-dresses">
 			<div class="women-grids wp1 animated wow slideInUp product-item" data-wow-delay=".5s">
 				<a href="{{entry.url}}">
 					<div class="product-img">
-						<img src="{{entry.image_thumbnails[0].url}}" alt="" />
+						
+						<img src="/images/{{entry.image_thumbnails[0]._internal_url}}" alt="" />
 						<div class="p-mask">
 							<form action="#" method="post">
 								<input type="hidden" name="cmd" value="_cart" />
