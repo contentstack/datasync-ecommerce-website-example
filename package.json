@@ -8,7 +8,7 @@
     "datasync-mongodb-sdk": "file:modules/datasync-mongodb-sdk-1.0.0.tgz",
     "datasync-filesystem-sdk": "file:modules/datasync-filesystem-sdk-1.0.0.tgz",
     "async": "2.6.1",
-    "debug": "2.6.9",
+    "debug": "4.3.4",
     "express": "4.16.0",
     "http-errors": "1.6.2",
     "morgan": "1.9.0",
