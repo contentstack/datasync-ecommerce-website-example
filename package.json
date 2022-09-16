@@ -7,7 +7,7 @@
   "dependencies": {
     "datasync-mongodb-sdk": "file:modules/datasync-mongodb-sdk-1.0.0.tgz",
     "datasync-filesystem-sdk": "file:modules/datasync-filesystem-sdk-1.0.0.tgz",
-    "async": "2.6.1",
+    "async": "3.2.4",
     "debug": "2.6.9",
     "express": "4.16.0",
     "http-errors": "1.6.2",
