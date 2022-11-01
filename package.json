@@ -1,19 +1,19 @@
 {
   "name": "datasync-ecommerce-website",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "scripts": {
     "start": "node ./bin/www"
   },
   "dependencies": {
-    "datasync-mongodb-sdk": "file:modules/datasync-mongodb-sdk-1.0.0.tgz",
-    "datasync-filesystem-sdk": "file:modules/datasync-filesystem-sdk-1.0.0.tgz",
-    "async": "2.6.1",
-    "debug": "2.6.9",
-    "express": "4.16.0",
-    "http-errors": "1.6.2",
-    "morgan": "1.9.0",
-    "nunjucks": "3.1.3",
-    "request": "2.87.0"
+    "async": "^2.6.4",
+    "datasync-filesystem-sdk": "https://github.com/contentstack/datasync-filesystem-sdk",
+    "datasync-mongodb-sdk": "https://github.com/contentstack/datasync-mongodb-sdk",
+    "debug": "^2.6.9",
+    "express": "^4.16.0",
+    "http-errors": "^1.6.2",
+    "morgan": "^1.10.0",
+    "nunjucks": "^3.2.3",
+    "request": "^2.88.2"
   },
   "repository": {
     "type": "git",
