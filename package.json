@@ -20,5 +20,8 @@
     "url": "https://github.com/contentstack/datasync-ecommerce-website-example"
   },
   "author": "Contentstack LLC <support@contentstack.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "chokidar": "^3.5.3"
+  }
 }
