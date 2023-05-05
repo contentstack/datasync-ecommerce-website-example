@@ -1,6 +1,6 @@
 {
   "name": "datasync-ecommerce-website",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "scripts": {
     "start": "node ./bin/www"
   },
@@ -9,8 +9,8 @@
     "chokidar": "^3.5.3",
     "datasync-filesystem-sdk": "github:contentstack/datasync-filesystem-sdk",
     "datasync-mongodb-sdk": "github:contentstack/datasync-mongodb-sdk",
-    "debug": "^3.1.0",
-    "express": "^4.16.0",
+    "debug": "^4.3.4",
+    "express": "^4.18.2",
     "http-errors": "^1.6.2",
     "morgan": "^1.10.0",
     "nunjucks": "^3.2.3",
@@ -21,5 +21,8 @@
     "url": "https://github.com/contentstack/datasync-ecommerce-website-example"
   },
   "author": "Contentstack LLC <support@contentstack.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "chokidar": "^3.5.3"
+  }
 }
