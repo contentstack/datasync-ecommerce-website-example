@@ -6,8 +6,9 @@
   },
   "dependencies": {
     "async": "^2.6.4",
-    "datasync-filesystem-sdk": "https://github.com/contentstack/datasync-filesystem-sdk",
-    "datasync-mongodb-sdk": "https://github.com/contentstack/datasync-mongodb-sdk",
+    "chokidar": "^3.5.3",
+    "datasync-filesystem-sdk": "github:contentstack/datasync-filesystem-sdk",
+    "datasync-mongodb-sdk": "github:contentstack/datasync-mongodb-sdk",
     "debug": "^3.1.0",
     "express": "^4.16.0",
     "http-errors": "^1.6.2",
