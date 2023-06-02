@@ -1,18 +1,19 @@
-const express = require('express')
-const Contentstack = require('../models/contentstack')
-const router = express.Router()
-const Stack = Contentstack.Stack
+const express = require("express");
+const Contentstack = require("../models/contentstack");
+const router = express.Router();
+const Stack = Contentstack.Stack;
 
-router.get('/', (req, res, next) => {
-  return Stack.contentType('product').entries().includeReferences()
+router.get("/", (req, res, next) => {
+  return Stack.contentType("product")
+    .entries()
+    .includeReferences()
     .find()
     .then((result) => {
-      console.log(result.entries[1],"result home ")
-      return res.render('home.html', {
-        entries: result
-      })
+      return res.render("home.html", {
+        entries: result,
+      });
     })
-    .catch(next)
-})
+    .catch(next);
+});
 
-module.exports = router
+module.exports = router;

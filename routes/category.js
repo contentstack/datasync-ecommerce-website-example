@@ -1,23 +1,23 @@
-const express = require('express')
-const Contentstack = require('../models/contentstack')
-const router = express.Router()
-const Stack = Contentstack.Stack
+const express = require("express");
+const Contentstack = require("../models/contentstack");
+const router = express.Router();
+const Stack = Contentstack.Stack;
 
-router.get('/category/:id', (req, res, next) => {
-  return Stack.contentType('product')
+router.get("/category/:id", (req, res, next) => {
+  return Stack.contentType("product")
     .entries()
     .queryReferences({
-      'category.uid': req.params.id
+      "category.uid": req.params.id,
     })
     .includeReferences()
     .includeCount()
     .find()
     .then((result) => {
-      return res.render('category.html', {
-        entries: result
-      })
+      return res.render("category.html", {
+        entries: result,
+      });
     })
-    .catch(next)
-})
+    .catch(next);
+});
 
-module.exports = router
+module.exports = router;
