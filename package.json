@@ -10,7 +10,7 @@
     "datasync-filesystem-sdk": "github:contentstack/datasync-filesystem-sdk",
     "datasync-mongodb-sdk": "github:contentstack/datasync-mongodb-sdk",
     "debug": "^4.3.4",
-    "express": "^4.18.2",
+    "express": "^4.21.1",
     "http-errors": "^1.6.2",
     "morgan": "^1.10.0",
     "nunjucks": "^3.2.3",
