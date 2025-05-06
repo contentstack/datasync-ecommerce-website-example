@@ -6,7 +6,7 @@
   },
   "dependencies": {
     "async": "^2.6.4",
-    "chokidar": "^3.5.3",
+    "chokidar": "^4.0.0",
     "datasync-filesystem-sdk": "github:contentstack/datasync-filesystem-sdk",
     "datasync-mongodb-sdk": "github:contentstack/datasync-mongodb-sdk",
     "debug": "^4.3.4",
@@ -23,6 +23,6 @@
   "author": "Contentstack LLC <support@contentstack.com>",
   "license": "MIT",
   "devDependencies": {
-    "chokidar": "^3.5.3"
+    "chokidar": "^4.0.0"
   }
 }
